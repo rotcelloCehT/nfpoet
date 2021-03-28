@@ -11,3 +11,7 @@
   font-family: "Roboto-Regular";
   src: url("./fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "JFS";
+  src: url("./fonts/JacquesFrancoisShadow-Regular.ttf");
+}

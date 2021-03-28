@@ -14,12 +14,11 @@
     display: flex;
     width: 100%;
     margin-bottom: 30%;
-    transition: .2s ease-in-out;
 }
 
 .poem-container:hover {
     box-shadow:  9px 9px 18px #ababab,
-             -9px -9px 18px #ffffff
+             -9px -9px 18px #ffffff;
 }
 
 .poem-container img {
