@@ -11,45 +11,48 @@
     justify-content: flex-end;
     align-items: center;
     height: 70px;
+    background: lightblue;
 }
-.nav-container div {
-    flex-grow: 1;
-}
-
 .home-container {
+    flex-grow: 1;
     /* Align title */
     flex-basis: 0;
     align-items: center;
 }
 .home-button {
-    height: 55px;
-    width: 55px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     background-image: url('../images/profile.jpg');
     background-size: cover;
     background-position: center;
     box-shadow: 0px 0px 5px #000000;
 
-    margin-left: 25px;
+    margin-left: 15px;
 }
-
 
 .title {
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-self: flex-end;
     font-family: "JFS";
-    font-size: 35px;
-    
+    font-size: 24px;
+}
+
+.filler {
+    flex-grow: 1;
 }
 
 /* VIEW */
 .view-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(200vh - 70px);
+    background-color: lightcoral;
 }
 .view-container div {
     margin-top: 2%;
@@ -111,11 +114,15 @@
 
 .nft-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80%;
     width: 30%;
     margin-left: 5%;
+}
+.nft-container a {
+    height: 100%;
 }
 .nft-container img {
     height: 100%;
@@ -124,8 +131,28 @@
 }
 
 .share-container {
-    display: flex;
-    height: 80%;
-    align-items: flex-end;
-    /* background-color: red; */
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+
+
+/* DESKTOP */
+@media only screen and (min-width: 600px) {
+    .title {
+        font-size: 35px;
+    }
+    .home-button {
+        height: 55px;
+        width: 55px;
+        margin-left: 25px;
+    }
+    .filler {
+        flex-grow: 1;
+    }
+
+    .view-container {
+        flex-direction: row;
+        height: calc(100vh - 70px);
+    }
 }

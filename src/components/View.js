@@ -1,8 +1,7 @@
 import './View.css';
 import { Link } from 'react-router-dom';
-import { FacebookButton, FacebookCount } from "react-social";
 
-import Twitter from '../images/twitter.svg'
+import { Share } from 'react-twitter-widgets'
 
 function View (props) {
     console.log(props.props)
@@ -25,11 +24,8 @@ function View (props) {
                 <div className="nft-container">
                     <img src={props.props[0].largeSrc} alt="I fucked up"/>
                 </div>
-                <div data-aos="fade-in" data-aos-duration="1500" ata-aos-easing="ease-in" className="share-container">
-                <FacebookButton url={url} appId={appId}>
-                    <FacebookCount url={url} />
-                    {" Share " + url}
-                </FacebookButton>
+                <div className="share-container">
+                <Share options={{text: '#nfpoem', via: 'nfpoet'}}/>
                 </div>
             </div>
             
