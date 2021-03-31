@@ -30,7 +30,7 @@ import LifeItselfLarge from './images/LifeItself.jpg';
 // POEM LIST
 const poemList = [
   {
-      key: 1,
+      key: 0,
       title: 'Play Me What You Love',
       date: '2020-03-24',
       smallSrc: PlayMeWhatYouLove,
@@ -53,29 +53,41 @@ const poemList = [
 
   },
   {
-      key: 2,
+      key: 1,
       title: 'Children Of Spain',
       date: '2021-02-12',
       smallSrc: ChildrenOfSpain,
       largeSrc: ChildrenOfSpainLarge,
-      poem: 
-          <p>We are it, <br/>
-          Showing itself to itself. <br/>
-          Stemming from a root, <br/>
-          Leaves of the cell. <br/><br/>
-          
-          The tree above remains, <br/>
-          A branch of the main. <br/>
-          I below remain, <br/>
-          A branch of the main. <br/><br/>
-          
-          Dissolving to evolve, <br/>
-          Changing it’s appearance. <br/>
-          Still unknown, the reason, <br/>
-          Why it continues to love.</p>
+      poem:
+      <p>
+      Tuesday strolling through a plaza. <br/>
+      Enveloped in it’s light.<br/>
+      Sit for a meal, <br/>
+      To gaze around the night.<br/><br/>
+      
+      I lay in lassitude,<br/>
+      Like a moon in placid skies.<br/>
+      Yet warm air from morning,<br/>
+      left streets bellow revived.<br/><br/>
+      
+      The crowd reveals a playground,<br/>
+      Around which play the children.<br/>
+      Of parents and their friends,<br/>
+      Drinking close conversing. <br/><br/>
+      
+      I knew it when I saw one,<br/>
+      Run back to loving smiles.<br/>
+      I need not give up living,<br/>
+      When time comes for a child.<br/><br/>
+      
+      They played along till Wednesday,<br/>
+      The parents mingled on. <br/>
+      At end of night united,<br/>
+      For each had lived their song.
+      </p>
   },
   {
-      key: 3,
+      key: 2,
       title: 'Life Itself',
       date: '2021-03-13',
       smallSrc: LifeItself,
@@ -99,6 +111,8 @@ const poemList = [
 ];
 
 
+
+var key = 1;
 function App() {
   AOS.init();
   return (
@@ -112,7 +126,7 @@ function App() {
             <Footer/>
           </Route>
           <Route exact path="/view">   
-            <View props={poemList}/>
+            <View props={poemList} key={key}/>
           </Route>
         </Switch>
 
