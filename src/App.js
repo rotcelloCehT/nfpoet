@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 
 import {
   BrowserRouter,
+  HashRouter,
   Switch,
   Route
 } from "react-router-dom";
@@ -117,7 +118,7 @@ const poemList = [
 function App() {
   AOS.init();
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Switch>
           <Route exact path="/">
@@ -135,7 +136,7 @@ function App() {
 
         
       </div>
-    </BrowserRouter>
+    </HashRouter>
     
   );
 }
