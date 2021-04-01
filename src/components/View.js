@@ -14,13 +14,8 @@ function View ({props, index}) {
 
     function prevSlide () {
         setCurrent(current === 0 ? length - 1 : current - 1);
-        redirectView();
     };
 
-    const redirectView = () => {
-        console.log('test: ', props[current].link)
-        return <Redirect to={props[current].link} />;
-    }
     return(
         <div className="main-container">
             <Redirect to={props[current].link} />
@@ -30,7 +25,7 @@ function View ({props, index}) {
                 <div className="filler"></div>
             </div>
             <div className="view-container" >
-                <div onClick={redirectView} className="poem-text-container">
+                <div className="poem-text-container">
                     <div id="scroll-style" className="poem-text">
                     {props[current].poem}
                     </div>
