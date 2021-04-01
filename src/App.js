@@ -35,6 +35,7 @@ const poemList = [
       date: '2020-03-24',
       smallSrc: PlayMeWhatYouLove,
       largeSrc: PlayMeWhatYouLoveLarge,
+      link: "/playmewhatyoulove",
       poem: <p>Lessons hidden to the reader,<br/>
       Pealed in layers by the listener.<br/>
       Live a moment, pure and teaching,<br/>
@@ -58,6 +59,7 @@ const poemList = [
       date: '2021-02-12',
       smallSrc: ChildrenOfSpain,
       largeSrc: ChildrenOfSpainLarge,
+      link: "/childrenofspain",
       poem:
       <p>
       Tuesday strolling through a plaza. <br/>
@@ -92,6 +94,7 @@ const poemList = [
       date: '2021-03-13',
       smallSrc: LifeItself,
       largeSrc: LifeItselfLarge,
+      link: "/lifeitself",
       poem: 
           <p>We are it, <br/>
           Showing itself to itself. <br/>
@@ -111,8 +114,6 @@ const poemList = [
 ];
 
 
-
-var key = 1;
 function App() {
   AOS.init();
   return (
@@ -125,9 +126,11 @@ function App() {
             <Gallery props={poemList}/>
             <Footer/>
           </Route>
-          <Route exact path="/view">   
-            <View props={poemList} key={key}/>
-          </Route>
+          { poemList.map((poem, index) => (
+            <Route exact path={poem.link}>   
+              <View props={poemList} index={index}/>
+            </Route>
+          ))} 
         </Switch>
 
         

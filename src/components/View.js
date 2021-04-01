@@ -1,30 +1,36 @@
 import './View.css';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Share } from 'react-twitter-widgets';
 
 import arrow from '../images/arrow.svg';
-function View ({props, key}) {
-    const [current, setCurrent] = useState(0);
+function View ({props, index}) {
+    const [current, setCurrent] = useState(index);
     const length = props.length;
 
-    const nextSlide = () => {
+    function nextSlide () {
         setCurrent(current === length - 1 ? 0 : current + 1);
     };
 
-    const prevSlide = () => {
+    function prevSlide () {
         setCurrent(current === 0 ? length - 1 : current - 1);
+        redirectView();
     };
-    console.log(props[0])
+
+    const redirectView = () => {
+        console.log('test: ', props[current].link)
+        return <Redirect to={props[current].link} />;
+    }
     return(
         <div className="main-container">
+            <Redirect to={props[current].link} />
             <div className="nav-container">
                 <div className="home-container"><Link to="/"><div className="home-button"></div></Link></div> 
                 <div className="title">{props[current].title}</div>
                 <div className="filler"></div>
             </div>
             <div className="view-container" >
-                <div className="poem-text-container">
+                <div onClick={redirectView} className="poem-text-container">
                     <div id="scroll-style" className="poem-text">
                     {props[current].poem}
                     </div>
