@@ -2,7 +2,6 @@ import './Gallery.css';
 import { Link } from 'react-router-dom';
 
 function Gallery (props) {
-    console.log(props.props)
     return(
         <div className="gallery-container">
             <div className="gallery-list">

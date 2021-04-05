@@ -13,18 +13,20 @@ import 'aos/dist/aos.css';
 import {
   BrowserRouter,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // PLAY ME WHAT YOU LOVE
 import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.jpg';
-import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove.jpg';
+import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove-large.jpg';
 // CHILDREN OF SPAIN
 import ChildrenOfSpain from './images/ChildrenOfSpain.jpg';
-import ChildrenOfSpainLarge from './images/ChildrenOfSpain.jpg';
+import ChildrenOfSpainLarge from './images/ChildrenOfSpain-large.jpg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.jpg';
-import LifeItselfLarge from './images/LifeItself.jpg';
+import LifeItselfLarge from './images/LifeItself-large.jpg';
 
 
 // POEM LIST
@@ -118,7 +120,12 @@ function App() {
   AOS.init();
   return (
     <BrowserRouter>
+    <HelmetProvider>
       <div className="App">
+      <Helmet>
+        <title>nfpoet</title>
+        <meta name="description" content="A collection of poems represented by NFT's. For each poem there is one artwork. Posses the art, posses the poem" />
+      </Helmet>
         <Switch>
           <Route exact path="/">
             <Header />
@@ -127,14 +134,17 @@ function App() {
             <Footer/>
           </Route>
           { poemList.map((poem, index) => (
-            <Route exact path={poem.link}>   
+            <Route key={poem.key} exact path={poem.link}>   
               <View props={poemList} index={index}/>
             </Route>
           ))} 
+          <Route render={() => <Redirect to={{pathname: "/"}} />} />
         </Switch>
 
         
       </div>
+      <script> if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer </script>
+      </HelmetProvider>
     </BrowserRouter>
     
   );
