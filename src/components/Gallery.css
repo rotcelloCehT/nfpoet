@@ -13,7 +13,20 @@
 .poem-container {
     display: flex;
     width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30%;
+
+}
+.poem-container Link {
+    width: 100%;
+    height: auto;
+    
+}
+.poem-container img {
+    width: 100%;
+    height: auto;
 }
 
 .poem-container:hover {
@@ -30,7 +43,6 @@
 /* DESKTOP */
 @media only screen and (min-width: 600px) {
     .gallery-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -38,5 +50,12 @@
     .poem-container {
         width: 40%;
         margin-bottom: 20%;
+        
+    }
+    .poem-container Link {
+        
+    }
+    .poem-container img {
+        width: 100%;
     }
 }

@@ -7,7 +7,7 @@ function Gallery (props) {
             <div className="gallery-list">
                 { props.props.map((poem, index) => (
                     <div key={ poem.key } className="poem-container" data-aos="fade-in" data-aos-duration="3000">
-                        <Link to={poem.link}><img src={poem.smallSrc} alt="test"/></Link>
+                        <Link to={poem.link}><img src={poem.smallSrc} alt="nfpoem" width="100px" height="100px" /></Link>
                     </div>
                 ))}
             </div>
