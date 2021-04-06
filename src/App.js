@@ -22,11 +22,11 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.svg';
 import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove.svg';
 // CHILDREN OF SPAIN
-import ChildrenOfSpain from './images/PlayMeWhatYouLove.svg';
-import ChildrenOfSpainLarge from './images/PlayMeWhatYouLove.svg';
+import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
+import ChildrenOfSpainLarge from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
-import LifeItself from './images/PlayMeWhatYouLove.svg';
-import LifeItselfLarge from './images/PlayMeWhatYouLove.svg';
+import LifeItself from './images/LifeItself.svg';
+import LifeItselfLarge from './images/LifeItself.svg';
 
 
 // POEM LIST
