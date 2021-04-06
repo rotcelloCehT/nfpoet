@@ -1,18 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  font-display: fallback;
 }
 
 @font-face {
   font-family: "Roboto-Thin";
   src: url("./fonts/Roboto-Thin.ttf");
+  font-display: fallback;
 }
 @font-face {
   font-family: "Roboto-Regular";
   src: url("./fonts/Roboto-Regular.ttf");
+  font-display: fallback;
 }
 @font-face {
   font-family: "JFS";
   src: url("./fonts/JacquesFrancoisShadow-Regular.ttf");
+  font-display: fallback;
 }
