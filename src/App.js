@@ -19,14 +19,14 @@ import {
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // PLAY ME WHAT YOU LOVE
-import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.jpg';
-import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove-large.jpg';
+import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.svg';
+import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove.svg';
 // CHILDREN OF SPAIN
-import ChildrenOfSpain from './images/ChildrenOfSpain.jpg';
-import ChildrenOfSpainLarge from './images/ChildrenOfSpain-large.jpg';
+import ChildrenOfSpain from './images/PlayMeWhatYouLove.svg';
+import ChildrenOfSpainLarge from './images/PlayMeWhatYouLove.svg';
 // LIFE ITSELF
-import LifeItself from './images/LifeItself.jpg';
-import LifeItselfLarge from './images/LifeItself-large.jpg';
+import LifeItself from './images/PlayMeWhatYouLove.svg';
+import LifeItselfLarge from './images/PlayMeWhatYouLove.svg';
 
 
 // POEM LIST
