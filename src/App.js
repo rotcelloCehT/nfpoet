@@ -19,7 +19,7 @@ import {
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // PLAY ME WHAT YOU LOVE
-import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.';
+import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.jpg';
 import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove-large.jpg';
 // CHILDREN OF SPAIN
 import ChildrenOfSpain from './images/ChildrenOfSpain.jpg';
