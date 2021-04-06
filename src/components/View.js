@@ -1,7 +1,7 @@
 import './View.css';
-import React, { useState, Suspense } from "react";
+import { useState } from "react";
 import { Link, Redirect } from 'react-router-dom';
-import { Share } from 'react-twitter-widgets';
+// import { Share } from 'react-twitter-widgets';
 
 import arrow from '../images/arrow.svg';
 function View ({props, index}) {
@@ -38,11 +38,9 @@ function View ({props, index}) {
                         <img src={props[current].source} alt=""/>
                     </a>
                 </div>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <div className="share-container">
-                        <Share options={{text: '#nfpoem', via: 'nfpoet'}}/>
-                    </div>
-                </Suspense>
+                {/* <div className="share-container">
+                    <Share options={{text: '#nfpoem', via: 'nfpoet'}}/>
+                </div> */}
             </div>
             <div onClick={nextSlide} className="previous-container">
                 <img src={arrow} alt=""/>
