@@ -20,13 +20,10 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // PLAY ME WHAT YOU LOVE
 import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.svg';
-import PlayMeWhatYouLoveLarge from './images/PlayMeWhatYouLove.svg';
 // CHILDREN OF SPAIN
 import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
-import ChildrenOfSpainLarge from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.svg';
-import LifeItselfLarge from './images/LifeItself.svg';
 
 
 // POEM LIST
@@ -35,8 +32,7 @@ const poemList = [
       key: 0,
       title: 'Play Me What You Love',
       date: '2020-03-24',
-      smallSrc: PlayMeWhatYouLove,
-      largeSrc: PlayMeWhatYouLoveLarge,
+      source: PlayMeWhatYouLove,
       link: "/playmewhatyoulove",
       poem: <p>Lessons hidden to the reader,<br/>
       Pealed in layers by the listener.<br/>
@@ -59,8 +55,7 @@ const poemList = [
       key: 1,
       title: 'Children Of Spain',
       date: '2021-02-12',
-      smallSrc: ChildrenOfSpain,
-      largeSrc: ChildrenOfSpainLarge,
+      source: ChildrenOfSpain,
       link: "/childrenofspain",
       poem:
       <p>
@@ -94,8 +89,7 @@ const poemList = [
       key: 2,
       title: 'Life Itself',
       date: '2021-03-13',
-      smallSrc: LifeItself,
-      largeSrc: LifeItselfLarge,
+      source: LifeItself,
       link: "/lifeitself",
       poem: 
           <p>We are it, <br/>
