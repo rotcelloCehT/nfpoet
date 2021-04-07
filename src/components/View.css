@@ -178,7 +178,7 @@
 
     .view-container {
         flex-direction: row;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 80px);
         justify-content: center;
     }
     .view-container div {
