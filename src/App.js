@@ -39,6 +39,7 @@ const poemList = [
       date: '2020-03-24',
       source: PlayMeWhatYouLove,
       link: "/playmewhatyoulove",
+      opensea: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/14995722904351388118911188875872629950668797404550306159985107662425320062977",
       poem: <p>Lessons hidden to the reader,<br/>
       Pealed in layers by the listener.<br/>
       Live a moment, pure and teaching,<br/>
@@ -62,6 +63,7 @@ const poemList = [
       date: '2021-02-12',
       source: ChildrenOfSpain,
       link: "/childrenofspain",
+      opensea: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/14995722904351388118911188875872629950668797404550306159985107663524831690753",
       poem:
       <p>
       Tuesday strolling through a plaza. <br/>
@@ -96,6 +98,7 @@ const poemList = [
       date: '2021-03-13',
       source: LifeItself,
       link: "/lifeitself",
+      opensea: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/14995722904351388118911188875872629950668797404550306159985107665723854946305",
       poem: 
           <p>We are it, <br/>
           Showing itself to itself. <br/>

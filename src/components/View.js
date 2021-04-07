@@ -34,7 +34,7 @@ function View ({props, index}) {
                     </div>
                 </div>
                 <div className="nft-container">
-                    <a target="__blank" href="https://opensea.io/">
+                    <a target="__blank" href={props[current].opensea}>
                         <img src={props[current].source} alt=""/>
                     </a>
                 </div>
