@@ -15,6 +15,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+// LAZY LOADING THE VIEW (increase mobile speed)
 import React, { Suspense } from 'react';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -133,6 +134,7 @@ function App() {
           </Route>
           { poemList.map((poem, index) => (
             <Route key={poem.key} exact path={poem.link}>  
+            {/* Lazy loading the view component */}
               <Suspense fallback={<div>Loading...</div>}>
                 <View props={poemList} index={index}/>
               </Suspense> 
