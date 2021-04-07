@@ -13,7 +13,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 // LAZY LOADING THE VIEW (increase mobile speed)
 import React, { Suspense } from 'react';

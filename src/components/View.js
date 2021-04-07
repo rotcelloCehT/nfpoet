@@ -1,10 +1,14 @@
 import './View.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, Redirect } from 'react-router-dom';
 import { Share } from 'react-twitter-widgets';
 
 import arrow from '../images/arrow.svg';
 function View ({props, index}) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     const [current, setCurrent] = useState(index);
     const length = props.length;
 
