@@ -4,7 +4,6 @@ import Intro from './components/Intro'
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
-import View from './components/View';
 
 
 import AOS from 'aos';
@@ -16,6 +15,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import React, { Suspense } from 'react';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 // PLAY ME WHAT YOU LOVE
@@ -24,6 +24,10 @@ import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.svg';
 import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.svg';
+
+// VIEW PAGE
+// import View from './components/View';
+const  View = React.lazy(() => import('./components/View'));
 
 
 // POEM LIST
@@ -128,8 +132,10 @@ function App() {
             <Footer/>
           </Route>
           { poemList.map((poem, index) => (
-            <Route key={poem.key} exact path={poem.link}>   
-              <View props={poemList} index={index}/>
+            <Route key={poem.key} exact path={poem.link}>  
+              <Suspense fallback={<div>Loading...</div>}>
+                <View props={poemList} index={index}/>
+              </Suspense> 
             </Route>
           ))} 
           <Route render={() => <Redirect to={{pathname: "/"}} />} />
