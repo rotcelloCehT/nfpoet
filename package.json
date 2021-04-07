@@ -16,6 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-social": "^1.10.0",
+    "react-swipeable": "^6.1.0",
+    "react-swipeable-routes": "^0.8.0",
     "react-twitter-widgets": "^1.9.5",
     "web-vitals": "^1.0.1"
   },
