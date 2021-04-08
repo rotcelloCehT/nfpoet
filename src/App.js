@@ -154,7 +154,4 @@ function App() {
     
   );
 }
-
-// HIDE THE DARN TWITTER ERROR BECAUSE I DON'T WANT TO ALLOW ACCESS.
-console.warn = () => {};
 export default App;
