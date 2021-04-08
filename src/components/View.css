@@ -218,6 +218,10 @@
         box-shadow:  9px 9px 18px #ababab,
                  -9px -9px 18px #ffffff;
     }
+    .nft-container img:hover {
+        box-shadow:  9px 9px 18px #777777,
+                 -9px -9px 18px #ffffff;
+    }
     .share-container {
         margin-bottom: 0%;
         position: absolute;
