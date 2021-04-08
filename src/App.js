@@ -119,6 +119,7 @@ const poemList = [
 
 
 function App() {
+  // Animation framwork AOS
   AOS.init();
   return (
     <BrowserRouter>
@@ -132,14 +133,14 @@ function App() {
           <Route exact path="/">
             <Header />
             <div data-aos="fade-down" data-aos-duration="1500" ><Intro /></div>
-            <Gallery props={poemList}/>
+            <Gallery poemList={poemList}/>
             <Footer/>
           </Route>
           { poemList.map((poem, index) => (
             <Route key={poem.key} exact path={poem.link}>  
             {/* Lazy loading the view component */}
               <Suspense fallback={<div>Loading...</div>}>
-                <View props={poemList} index={index}/>
+                <View poemList={poemList} index={index}/>
               </Suspense> 
             </Route>
           ))} 
