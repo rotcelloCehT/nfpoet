@@ -127,7 +127,6 @@ function App() {
       <div className="App">
       <Helmet>
         <title>nfpoet</title>
-        <meta name="description" content="A collection of poems represented by NFT's. For each poem there is one artwork. Posses the art, posses the poem" />
       </Helmet>
         <Switch>
           <Route exact path="/">
