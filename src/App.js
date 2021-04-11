@@ -1,4 +1,10 @@
 import './App.css';
+import Header from './components/Header';
+import Intro from './components/Intro'
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
+
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -20,14 +26,6 @@ import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.svg';
 
-// HEADER COMPONENT
-const  Header = React.lazy(() => import('./components/Header'));
-// INTRO COMPONENT
-const  Intro = React.lazy(() => import('./components/Intro'));
-// GALLERY COMPONENT
-const  Gallery = React.lazy(() => import('./components/Gallery'));
-// FOOTER COMPONENT
-const  Footer = React.lazy(() => import('./components/Footer'));
 // VIEW PAGE
 // import View from './components/View';
 const  View = React.lazy(() => import('./components/View'));
@@ -125,7 +123,6 @@ function App() {
   AOS.init();
   return (
     <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
     <HelmetProvider>
       <div className="App">
       <Helmet>
@@ -141,15 +138,18 @@ function App() {
           { poemList.map((poem, index) => (
             <Route key={poem.key} exact path={poem.link}>  
             {/* Lazy loading the view component */}
+              <Suspense fallback={<div>Loading...</div>}>
                 <View poemList={poemList} index={index}/>
+              </Suspense> 
             </Route>
           ))} 
           <Route render={() => <Redirect to={{pathname: "/"}} />} />
-        </Switch>  
+        </Switch>
+
+        
       </div>
       <script> if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer </script>
       </HelmetProvider>
-      </Suspense>
     </BrowserRouter>
     
   );
