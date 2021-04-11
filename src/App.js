@@ -1,10 +1,4 @@
 import './App.css';
-import Header from './components/Header';
-import Intro from './components/Intro'
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
-
-
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -26,6 +20,14 @@ import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.svg';
 
+// HEADER COMPONENT
+const  Header = React.lazy(() => import('./components/Header'));
+// INTRO COMPONENT
+const  Intro = React.lazy(() => import('./components/Intro'));
+// GALLERY COMPONENT
+const  Gallery = React.lazy(() => import('./components/Gallery'));
+// FOOTER COMPONENT
+const  Footer = React.lazy(() => import('./components/Footer'));
 // VIEW PAGE
 // import View from './components/View';
 const  View = React.lazy(() => import('./components/View'));
@@ -41,7 +43,7 @@ const poemList = [
       link: "/playmewhatyoulove",
       opensea: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/14995722904351388118911188875872629950668797404550306159985107662425320062977",
       poem: <p>Lessons hidden to the reader,<br/>
-      Pealed in layers by the listener.<br/>
+      Peeled in layers by the listener.<br/>
       Live a moment, pure and teaching,<br/>
       Older records gain new meaning.<br/><br/>
       
@@ -67,7 +69,7 @@ const poemList = [
       poem:
       <p>
       Tuesday strolling through a plaza. <br/>
-      Enveloped in it’s light.<br/>
+      Enveloped in its light.<br/>
       Sit for a meal, <br/>
       To gaze around the night.<br/><br/>
       
@@ -111,7 +113,7 @@ const poemList = [
           A branch of the main. <br/><br/>
           
           Dissolving to evolve, <br/>
-          Changing it’s appearance. <br/>
+          Changing its appearance. <br/>
           Still unknown, the reason, <br/>
           Why it continues to love.</p>
   }
@@ -123,6 +125,7 @@ function App() {
   AOS.init();
   return (
     <BrowserRouter>
+    <Suspense fallback={<div>Loading...</div>}>
     <HelmetProvider>
       <div className="App">
       <Helmet>
@@ -138,18 +141,15 @@ function App() {
           { poemList.map((poem, index) => (
             <Route key={poem.key} exact path={poem.link}>  
             {/* Lazy loading the view component */}
-              <Suspense fallback={<div>Loading...</div>}>
                 <View poemList={poemList} index={index}/>
-              </Suspense> 
             </Route>
           ))} 
           <Route render={() => <Redirect to={{pathname: "/"}} />} />
-        </Switch>
-
-        
+        </Switch>  
       </div>
       <script> if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer </script>
       </HelmetProvider>
+      </Suspense>
     </BrowserRouter>
     
   );
