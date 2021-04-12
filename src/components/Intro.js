@@ -4,7 +4,7 @@ function Intro () {
         // <ScrollAnimation animateIn="fadeIn">
             <div className="intro-container">
                 <div className="intro">
-                    <p>A collection of poems represented by NFT's<br></br>For each poem there is one artwork<br></br>Posses the art, posses the poem</p>
+                    <p>A collection of poems represented by NFT's<br></br>For each poem there is one artwork<br></br>Possess the art, possess the poem</p>
                 </div>
             </div>
         // </ScrollAnimation>
