@@ -25,6 +25,8 @@ import PlayMeWhatYouLove from './images/PlayMeWhatYouLove.svg';
 import ChildrenOfSpain from './images/ChildrenOfSpain.svg';
 // LIFE ITSELF
 import LifeItself from './images/LifeItself.svg';
+// LAST EXHALE
+import LastExhale from './images/LastExhale.svg'
 
 // VIEW PAGE
 // import View from './components/View';
@@ -114,6 +116,41 @@ const poemList = [
           Changing its appearance. <br/>
           Still unknown, the reason, <br/>
           Why it continues to love.</p>
+  },
+  {
+    key: 3,
+    title: 'Last Exhale',
+    date: '2021-04-12',
+    source: LastExhale,
+    link: "/lastexhale",
+    opensea: "https://opensea.io",
+    poem: 
+    <p>To the young smoker,<br/>
+    I love you.<br/>
+    Pillar of my foundation,<br/>
+    I forgive you.<br/><br/>
+    
+    Slave of sweet affliction,<br/>
+    Of the classiest addiction.<br/>
+    Sipping warmth through your inhales.<br/>
+    To feel, <br/>
+    Electric ripples on exhale.<br/><br/>
+    
+    Stamped are imprints in my memories.<br/>
+    Satisfied by loving lies,<br/>
+    Nicotine inside my arteries,<br/>
+    Pumping love through heart and eyes.<br/><br/>
+    
+    I am no longer able,<br/>
+    To smoke one with desire,<br/>
+    I’ve understood the trick,<br/>
+    That makes my tongue perspire.<br/><br/>
+    
+    I’m grateful to have lived,<br/>
+    Those feelings as though real.<br/>
+    The addict I have killed<br/>
+    Took with him an ideal. 
+    </p>
   }
 ];
 
