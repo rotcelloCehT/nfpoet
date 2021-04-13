@@ -76,7 +76,7 @@ const poemList = [
       I lay in lassitude,<br/>
       Like a moon in placid skies.<br/>
       Yet warm air from morning,<br/>
-      left streets bellow revived.<br/><br/>
+      left streets below revived.<br/><br/>
       
       The crowd reveals a playground,<br/>
       Around which play the children.<br/>
