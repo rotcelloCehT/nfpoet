@@ -148,7 +148,7 @@ const poemList = [
     
     I’m grateful to have lived,<br/>
     Those feelings as though real.<br/>
-    The addict I have killed<br/>
+    The addict I have killed,<br/>
     Took with him an ideal. 
     </p>
   }
