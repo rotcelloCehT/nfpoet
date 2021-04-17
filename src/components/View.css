@@ -40,7 +40,7 @@
     flex-grow: 1;
     justify-content: center;
     align-self: flex-end;
-    font-family: "JFS";
+    font-family: "Noto-Thin";
     font-size: 24px;
 }
 
@@ -76,7 +76,7 @@
     margin-bottom: 20%;
 }
 .poem-text {
-    font-family: "JFS";
+    font-family: "Noto-Thin";
     font-size: 15px;
     line-height: 2;
     padding: 10px 0 50px 0;

@@ -18,3 +18,8 @@
   src: url("./fonts/JacquesFrancoisShadow-Regular.ttf");
   font-display: fallback;
 }
+@font-face {
+  font-family: "Noto-Thin";
+  src: url("./fonts/NotoSansJP-Thin.otf");
+  font-display: fallback;
+}
